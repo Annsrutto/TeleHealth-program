@@ -1,0 +1,38 @@
+{% extends 'pages/base.html' %}
+{% block title %} Show Appointments {% endblock %}
+
+{% block content%}
+<table class="table table-success table-responsive" >
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Date</th>
+            <th>Department</th>
+            <th>Doctor</th>
+            <th>Message</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for appointment in appointments %}
+        <tr>
+            <td>{{ appointment.name }}</td>
+            <td>{{ appointment.email }}</td>
+            <td>{{ appointment.phone }}</td>
+            <td>{{ appointment.date }}</td>
+            <td>{{ appointment.department }}</td>
+            <td>{{ appointment.doctor }}</td>
+            <td>{{ appointment.message }}</td>
+            <td>
+                <a href="{% url 'teleapp:update_appointment' appointment.id %}" class="btn btn-success">Edit</a>
+                <a href="{% url 'teleapp:delete_appointment' appointment.id %}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

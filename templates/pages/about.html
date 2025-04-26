@@ -1,0 +1,42 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %} About Us{% endblock %}
+
+{% block content %}
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About Us<br></h2>
+          <p>Connecting you with healthcare professionals anytime, anywhere</p>
+        </div><!-- End Section Title -->
+  
+        <div class="container">
+  
+          <div class="row gy-4">
+            <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+              <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+            </div>
+            <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+              <h3>Your Health, Our Priority</h3>
+              <p class="fst-italic">
+                TeleAfya is committed to making healthcare accessible and convenient for everyone. Our platform connects you with a wide network of certified medical professionals, available to provide advice and treatment whenever you need it.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-all"></i> <span>Access medical consultations from the comfort of your home.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Enjoy secure, confidential interactions with qualified doctors.</span></li>
+                <li><i class="bi bi-check2-all"></i> <span>Get personalized healthcare guidance without the travel or waiting times.</span></li>
+              </ul>
+              <p>
+                With TeleAfya, we’re on a mission to bridge the gap between patients and healthcare providers. From preventive care to urgent consultations, our goal is to support your health journey, no matter where you are.
+              </p>
+            </div>
+          </div>
+  
+        </div>
+  
+      </section><!-- /About Section -->
+  
+{% endblock %}
